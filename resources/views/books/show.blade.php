@@ -10,7 +10,7 @@
 
         <div class="col-5 offset-1">
             @if ($book->image)
-                <img src="{{ Strage::utl('img/' . $book->image) }}" class="img-fluidentity?token=1ad">
+                <img src="{{ Storage::url('img/' . $book->image) }}" class="img-fluidentity?token=1ad">
             @else
                 <img src="{{ asset('img/dummy.png') }}" class="w-100 img-fluid">
             @endif
