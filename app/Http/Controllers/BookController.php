@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\MajorCategory;
 use App\Http\Requests\BookRequest;
 
 class BookController extends Controller
@@ -23,20 +24,23 @@ class BookController extends Controller
             $books = Auth::user()->books()->where('category_id', $request->category)->sortable()->paginate(8);
             $total_count = Auth::user()->books()->where('category_id', $request->category)->count();
             $category = Category::find($request->category);
+            $major_category = MajorCategory::find($category->major_category_id);
         } elseif ($keyword !== null) {
             $books = Auth::user()->books()->where('name', 'like', "%{$keyword}%")->sortable()->paginate(8);
-            $total_count = Auth::user()->books()->total();
+            $total_count = $books->total();
             $category = null;
+            $major_category = null;
         } else {
             $books = Auth::user()->books()->sortable()->paginate(8);
             $total_count = "";
             $category = null;
+            $major_category = null;
         }
         
         $categories = Category::all();
-        $major_category_names = Category::pluck('major_category_name')->unique();
+        $major_categories = MajorCategory::all();
 
-        return view('books.index', compact('books', 'category', 'categories', 'major_category_names', 'total_count', 'keyword'));
+        return view('books.index', compact('books', 'category', 'major_category', 'categories', 'major_categories', 'total_count', 'keyword'));
     }
 
     /**

@@ -14,13 +14,13 @@
 
 <div class="row">
     <div class="col-2">
-        @component('components.sidebar', ['categories' => $categories, 'major_category_names' => $major_category_names])                
+        @component('components.sidebar', ['categories' => $categories, 'major_categories' => $major_categories])                
         @endcomponent
     </div>
     <div class="col-9">
         <div class="container">
             @if ($category !== null)
-                <a href="{{ route('books.index') }}">トップ</a> > <a href="#">{{ $category->major_category_name }}</a> {{ $category->name }}
+                <a href="{{ route('books.index') }}">トップ</a> > <a href="#">{{ $major_category->name }}</a> {{ $category->name }}
                 <h1>{{ $category->name }}の書籍一覧{{$total_count}}件</h1>
             @elseif ($keyword !== null)
                 <a href="{{ route('books.index')}}">トップ</a> > 商品一覧
