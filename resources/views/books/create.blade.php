@@ -13,7 +13,7 @@
 <div class="container">
     <h1>新しい書籍を追加</h1>
 
-    <form action="{{ route('books.store') }}" method="POST" enctype="multipart/from-data">
+    <form action="{{ route('books.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="book-name">書名</label>
