@@ -40,7 +40,7 @@
                     <div class="col-3">
                         <a href="{{route('books.show', $book)}}">
                             @if ($book->image !== "")
-                                <img src="{{ Storage::url('img/' . $book->image) }}" class="img-fluidentity?token=1ad">
+                                <img src="{{ asset('storage/img/' . $book->image) }}" class="img-fluidentity?token=1ad">
                             @else
                                 <img src="{{ asset('img/dummy.png') }}" class="img-thumbnail">
                             @endif

@@ -13,11 +13,10 @@
                     <div class="d-inline-flex">
                         <a href="{{ route('books.show', $favorite_book->id) }}" class="w-25">
                             @if ($favorite_book->image !== "")
-                                <img src="{{ Storage::url('img' . $favorite_book->image) }}" class="img-fluidentity?token=1ad">
+                                <img src="{{ asset('storage/img/' . $favorite_book->image) }}" class="img-fluidentity?token=1ad">
                             @else
-                                
+                                <img src="{{ asset('img/dummy.png') }}" class="img-fluid w-100">
                             @endif
-                            <img src="{{ asset('img/dummy.png') }}" class="img-fluid w-100">
                         </a>
                         <div class="container mt-3">
                             <h5 class="w-100 bookstock-favorite-item-text">{{ $favorite_book->name }}</h5>
