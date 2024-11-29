@@ -173,3 +173,9 @@ label {
 .review-score-color:focus {
     color: yellowgreen;
 }
+
+.bookstock-delete-submit-button {
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #d94b0e;
+}
