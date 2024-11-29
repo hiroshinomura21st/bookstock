@@ -129,6 +129,12 @@ class BookController extends Controller
         $book->author = $request->input('author');
         $book->published_at = $request->input('published_at');
         $book->category_id = $request->input('category_id');
+
+        // 画像の保存とパスの設定
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('public/img');
+            $book->image = basename($path);
+        }
         $book->update();
 
         return redirect()->route('books.show', $book)->with('flash_message', '書籍情報を編集しました。');

@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <label for="book-image">画像アップロード</label>
-            <input type="file" name="image" id="image" class="form-control" value="{{ $book->image }}">
+            <input type="file" name="image" id="image" class="form-control">
         </div>
         <div class="form-group">
             <label for="book-category">カテゴリ</label>
