@@ -40,30 +40,6 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="postal_code" class="col-md-5 col-form-label text-md-left">郵便番号<span class="ml-1 bookstock-require-input-label"><span class="bookstock-require-input-label-text">必須</span></span></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('postal_code') is-invalid @enderror bookstock-login-input" name="postal_code" required placeholder="150-0043">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="address" class="col-md-5 col-form-label text-md-left">住所<span class="ml-1 bookstock-require-input-label"><span class="bookstock-require-input-label-text">必須</span></span></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('address') is-invalid @enderror bookstock-login-input" name="address" required placeholder="東京都渋谷区道玄坂２丁目１１−１">
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="phone" class="col-md-5 col-form-label text-md-left">電話番号<span class="ml-1 bookstock-require-input-label"><span class="bookstock-require-input-label-text">必須</span></span></label>
-
-                    <div class="col-md-7">
-                        <input type="text" class="form-control @error('phone') is-invalid @enderror bookstock-login-input" name="phone" required placeholder="03-5790-9039">
-                    </div>
-                </div>
-
-                <div class="form-group row">
                     <label for="password" class="col-md-5 col-form-label text-md-left">パスワード<span class="ml-1 bookstock-require-input-label"><span class="bookstock-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">

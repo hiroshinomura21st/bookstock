@@ -10,9 +10,9 @@
 
         <div class="col-5 offset-1">
             @if ($book->image)
-                <img src="{{ asset('storage/img/' . $book->image) }}" class="img-fluidentity?token=1ad">
+                <img src="{{ asset('storage/img/' . $book->image) }}" class="img-thumbnail bookstock-book-img-dtail">
             @else
-                <img src="{{ asset('img/dummy.png') }}" class="w-100 img-fluid">
+                <img src="{{ asset('img/book05.jpg') }}" class="img-fluid  bookstock-book-img-dtail">
             @endif
         </div>
         <div class="col">

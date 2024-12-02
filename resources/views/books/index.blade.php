@@ -10,7 +10,7 @@
     <p>{{ session('error_message') }}</p>
 @endif
 
-<a href="{{ route('books.create') }}">新規登録</a>
+<a href="{{ route('books.create') }}" class=" m-3">新規登録</a>
 
 <div class="row">
     <div class="col-2">
@@ -40,9 +40,9 @@
                     <div class="col-3">
                         <a href="{{route('books.show', $book)}}">
                             @if ($book->image !== "")
-                                <img src="{{ asset('storage/img/' . $book->image) }}" class="img-fluidentity?token=1ad">
+                                <img src="{{ asset('storage/img/' . $book->image) }}" class="img-thumbnail bookstock-book-img-books">
                             @else
-                                <img src="{{ asset('img/dummy.png') }}" class="img-thumbnail">
+                                <img src="{{ asset('img/book05.jpg') }}" class="img-thumbnail bookstock-book-img-books">
                             @endif
                         </a>
                         <div class="row">
