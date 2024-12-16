@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -14,7 +15,7 @@
 
 <div class="row">
     <div class="col-2">
-        @component('components.sidebar', ['categories' => $categories, 'major_categories' => $major_categories])                
+        @component('components.sidebar', ['categories' => $categories, 'major_categories' => $major_categories])
         @endcomponent
     </div>
     <div class="col-9">
@@ -33,7 +34,7 @@
             @sortablelink('author', '著者名')
         </div>
         <div class="container mt-4">
-                
+
             @if ($books->isNotEmpty())
                 <div class="row w-100">
                     @foreach ($books as $book)
