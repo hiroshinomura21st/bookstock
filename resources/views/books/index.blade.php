@@ -41,7 +41,7 @@
                     <div class="col-3">
                         <a href="{{route('books.show', $book)}}">
                             @if ($book->image !== "")
-                                <img src="{{ asset('storage/img/' . $book->image) }}" class="img-thumbnail bookstock-book-img-books">
+                                <img src="{{ asset('storage/images/' . $book->image) }}" class="img-thumbnail bookstock-book-img-books">
                             @else
                                 <img src="{{ asset('img/book05.jpg') }}" class="img-thumbnail bookstock-book-img-books">
                             @endif
