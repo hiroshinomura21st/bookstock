@@ -134,9 +134,15 @@ class BookController extends Controller
         $book->category_id = $request->input('category_id');
 
         // 画像の保存とパスの設定
-        if ($request->hasFile('image')) {
+        /* if ($request->hasFile('image')) {
             $path = $request->file('image')->store('public/img');
-            $book->image = basename($path);
+            $book->image = basename($path); */
+            if (request('image')) {
+                $original = request()->file('image')->getClientOriginalName();
+                // 日時追加
+                $name = date('Ymd_His').'_'.$original;
+                request()->file('image')->move('storage/images', $name);
+                $book->image = $name;
         }
         $book->update();
 
