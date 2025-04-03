@@ -11,7 +11,7 @@
     <p>{{ session('error_message') }}</p>
 @endif
 
-<a href="{{ route('books.create') }}" class=" m-3">新規登録</a>
+<a href="{{ route('books.create') }}" class="btn btn-primary m-3">新規登録</a>
 
 <div class="row">
     <div class="col-2">
