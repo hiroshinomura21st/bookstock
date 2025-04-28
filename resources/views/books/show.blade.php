@@ -27,10 +27,10 @@
                 <p class="d-flex align-items-end">
                     出版年月日：{{$book->published_at}}
                 </p>
-                <hr>                
+                <hr>
             </div>
             @auth
-            <form method="POST" class="m-3 align-items-end">
+            <form method="POST" class="align-items-end">
                 @csrf
                 <div class="col-5">
                     @if (Auth::user()->favorite_books()->where('book_id', $book->id)->exists())
@@ -113,5 +113,5 @@
         </div>
     </div>
 </div>
-    
+
 @endsection
